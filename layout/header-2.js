@@ -16,12 +16,7 @@ function Header2() {
                   <a>
                     <img
                       className="custom-logo-white"
-                      src="images/logo-white.png"
-                      alt=""
-                    />
-                    <img
-                      className="custom-logo"
-                      src="images/logo-2.png"
+                      src="images/logo-white.svg"
                       alt=""
                     />
                   </a>
@@ -43,7 +38,7 @@ function Header2() {
                 <div className="extra-cell">
                   <Link href="contact-us-2">
                     <a className="btn btn-primary rounded-xl gradient shadow">
-                      Get A Quote
+                      Run a Node
                     </a>
                   </Link>
                 </div>
@@ -65,77 +60,20 @@ function Header2() {
                 <ul className="nav navbar-nav navbar">
                   <li>
                     <Link href="/">
-                      <a>Home</a>
+                      <a>About</a>
                     </Link>
                   </li>
-                  <li className={`${open === "about" ? "open" : ""}`}>
-                    <a onClick={() => setOpen("about")}>
-                      <span>Pages</span>
-                      <i className="fa fa-chevron-down"></i>
-                    </a>
-                    <ul className="sub-menu">
-                      <li>
-                        <Link href="/about-us-2">
-                          <a>About Us</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/team-2">
-                          <a>Team</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/coming-soon">
-                          <a>Coming Soon</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/error-404">
-                          <a>Error 404</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className={`${open === "services" ? "open" : ""}`}>
-                    <a onClick={() => setOpen("services")}>
-                      <span>Services</span>
-                      <i className="fa fa-chevron-down"></i>
-                    </a>
-                    <ul className="sub-menu">
-                      <li>
-                        <Link href="/services-2">
-                          <a>Services</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/services-details-2">
-                          <a>Services Details</a>
-                        </Link>
-                      </li>
-                    </ul>
+                  <li>
+                    <Link href="/">
+                      <a>Energy comparison</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact-us-2">
-                      <a>Contact Us</a>
+                    <Link href="/">
+                      <a>FAQ</a>
                     </Link>
                   </li>
                 </ul>
-                <div className="dlab-social-icon">
-                  <ul>
-                    <Link href="https://en-gb.facebook.com/">
-                      <a className="fa fa-facebook"></a>
-                    </Link>
-                    <Link href="https://twitter.com/login?lang=en">
-                      <a className="fa fa-twitter"></a>
-                    </Link>
-                    <Link href="https://www.linkedin.com/login">
-                      <a className="fa fa-linkedin"></a>
-                    </Link>
-                    <Link href="https://www.instagram.com/">
-                      <a className="fa fa-instagram"></a>
-                    </Link>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

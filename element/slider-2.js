@@ -1,3 +1,5 @@
+import Counterup from "../component/counterup";
+
 function Slider2() {
   return (
     // <!-- Slider -->
@@ -21,7 +23,7 @@ function Slider2() {
                     animationName: "fadeInUp",
                   }}
                 >
-                  We are The Best
+                  Sustainable Bitcoin
                 </h6>
                 <h1
                   className="wow fadeInUp m-b20"
@@ -32,7 +34,8 @@ function Slider2() {
                     animationName: "fadeInUp",
                   }}
                 >
-                  We Provide Website Solution For You
+                  <Counterup count={1583457} />{" "}
+                  <small>Transactions to improve Bitcoin’s energy usage</small>
                 </h1>
                 <p
                   className="wow fadeInUp m-b30"
@@ -63,12 +66,12 @@ function Slider2() {
               </div>
             </div>
           </div>
-          <img className="img2 move-1" src="images/pattern/pattern8.png" alt />
-          <img className="img3 move-2" src="images/pattern/pattern9.png" alt />
+          <div className="img2 move-1" alt />
+          <div className="img3 move-2" alt />
         </div>
       </div>
       <div className="dz-media">
-        <img src="images/main-slider/slider2/pic1.jpg" alt />
+        <img src="images/main-slider/slider2/pic-alt.jpg" alt />
       </div>
     </div>
   );
