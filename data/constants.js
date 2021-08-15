@@ -13,6 +13,8 @@ export const BCH_ACTUAL_TX_PER_MINUTE = 68.7;
 export const ETH_ACTUAL_TX_PER_MINUTE = 800.4;
 export const ACTUAL_TX_PER_MINUTE_LAST_UPDATED = "August 14th, 2021";
 
-// August 14th, 4:00pm
-export const ECOFUD_STARTED_AT = 1628987565475;
+export const ECOFUD_STARTED_AT = parseInt(
+  process.env.NEXT_PUBLIC_ECOFUD_START_TIMESTAMP,
+  10
+);
 export const EC2_KWH_PER_MINUTE = 0.0000059375;

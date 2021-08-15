@@ -38,6 +38,7 @@ export async function getStaticProps() {
   try {
     info = await getEcofudPaymentsInfo();
   } catch (err) {
+    console.error("Failed to get payment info in getStaticProps", err);
     info = { count: 0, amount: 0 };
   }
   return {
