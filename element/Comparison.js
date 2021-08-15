@@ -1,6 +1,15 @@
 import React from "react";
+import { commaify } from "../util";
+import * as C from "../data/constants";
+import { useEcofudContext } from "../data/provider";
 
 export default function Comparison() {
+  const { paymentCount, paymentsPerMinute } = useEcofudContext();
+  const btcKwhTxPerMinute = C.BTC_KWH_PER_TX * C.BTC_ACTUAL_TX_PER_MINUTE;
+  const ecofudKwhPerTx =
+    (btcKwhTxPerMinute + C.EC2_KWH_PER_MINUTE) /
+    (C.BTC_ACTUAL_TX_PER_MINUTE + paymentsPerMinute);
+
   return (
     <section
       className="content-inner-2"
@@ -29,49 +38,51 @@ export default function Comparison() {
               <tr>
                 <td>Bitcoin</td>
                 <td>
-                  ~1,701 <small>kWh/tx</small>
+                  ~{commaify(C.BTC_KWH_PER_TX)} <small>kWh/tx</small>
                 </td>
                 <td>
-                  ~275 <small>tx/min</small>
+                  ~{commaify(C.BTC_MAX_TX_PER_MINUTE)} <small>tx/min</small>
                 </td>
                 <td>
-                  ~275 <small>tx/min</small>
+                  ~{commaify(C.BTC_ACTUAL_TX_PER_MINUTE)} <small>tx/min</small>
                 </td>
               </tr>
               <tr>
                 <td>Bitcoin Cash</td>
                 <td>
-                  ~1,701 <small>kWh/tx</small>
+                  ~{commaify(C.BCH_KWH_PER_TX)} <small>kWh/tx</small>
                 </td>
                 <td>
-                  ~275 <small>tx/min</small>
+                  ~{commaify(C.BCH_MAX_TX_PER_MINUTE)} <small>tx/min</small>
                 </td>
                 <td>
-                  ~275 <small>tx/min</small>
+                  ~{commaify(C.BCH_ACTUAL_TX_PER_MINUTE)} <small>tx/min</small>
                 </td>
               </tr>
               <tr>
                 <td>Ethereum</td>
                 <td>
-                  ~140 <small>kWh/tx</small>
+                  ~{commaify(C.ETH_KWH_PER_TX)} <small>kWh/tx</small>
                 </td>
                 <td>
-                  ~871 <small>tx/min</small>
+                  ~{commaify(C.ETH_MAX_TX_PER_MINUTE)} <small>tx/min</small>
                 </td>
                 <td>
-                  ~275 <small>tx/min</small>
+                  ~{commaify(C.ETH_ACTUAL_TX_PER_MINUTE)} <small>tx/min</small>
                 </td>
               </tr>
               <tr>
                 <td>Bitcoin + ECOFUD</td>
                 <td>
-                  ~0.00787 <small>kWh/tx</small>
+                  ~{ecofudKwhPerTx.toFixed(2)} <small>kWh/tx</small>
                 </td>
                 <td>
-                  ~34,672 <small>tx/min</small>
+                  ~{(C.BTC_MAX_TX_PER_MINUTE + paymentsPerMinute).toFixed(2)}{" "}
+                  <small>tx/min</small>
                 </td>
                 <td>
-                  ~275 <small>tx/min</small>
+                  ~{(C.BTC_ACTUAL_TX_PER_MINUTE + paymentsPerMinute).toFixed(2)}{" "}
+                  <small>tx/min</small>
                 </td>
               </tr>
               <tr>

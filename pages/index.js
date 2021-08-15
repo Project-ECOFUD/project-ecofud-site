@@ -1,7 +1,6 @@
 import React from "react";
 import AboutUs2 from "../element/aboutUs-2";
 import Counter2 from "../element/counter2";
-import OurServices2 from "../element/our-services-2";
 import Slider2 from "../element/slider-2";
 import Footer2 from "../layout/footer-2";
 import Header2 from "./../layout/header-2";
@@ -10,10 +9,12 @@ import HowItWorks from "../element/HowItWorks";
 import QuestionAndAnswer from "../element/QuestionAndAnswer";
 // import Testimonial2 from "../element/testimonial-2";
 // import Blog2 from "../element/blog-2";
+import { EcofudContextProvider } from "../data/provider";
+import { getEcofudPaymentsInfo } from "../data/api";
 
-function Index2() {
+function Index(props) {
   return (
-    <>
+    <EcofudContextProvider {...props}>
       <Header2 />
       <div className="page-content bg-white">
         <Slider2 />
@@ -22,15 +23,30 @@ function Index2() {
         <HowItWorks />
         <Comparison />
         <QuestionAndAnswer />
-        <OurServices2 />
         {/* Twitter testimonials? */}
         {/* <Testimonial2 /> */}
         {/* Coverage? */}
         {/* <Blog2 /> */}
       </div>
       <Footer2 />
-    </>
+    </EcofudContextProvider>
   );
 }
 
-export default Index2;
+export async function getStaticProps() {
+  let info;
+  try {
+    info = await getEcofudPaymentsInfo();
+  } catch (err) {
+    info = { count: 0, amount: 0 };
+  }
+  return {
+    props: {
+      initialCount: info.count,
+      initialAmount: info.amount,
+    },
+    revalidate: 60,
+  };
+}
+
+export default Index;

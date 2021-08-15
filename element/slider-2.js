@@ -1,6 +1,8 @@
 import Counterup from "../component/counterup";
+import { useEcofudContext } from "../data/provider";
 
 function Slider2() {
+  const { paymentCount } = useEcofudContext();
   return (
     // <!-- Slider -->
     <div className="banner-two gradient">
@@ -34,7 +36,7 @@ function Slider2() {
                     animationName: "fadeInUp",
                   }}
                 >
-                  <Counterup count={1583457} />{" "}
+                  <Counterup count={paymentCount} />{" "}
                   <small>Transactions to improve Bitcoin’s energy usage</small>
                 </h1>
                 <p
