@@ -195,9 +195,20 @@ export default function QuestionAndAnswer() {
         <div className="row justify-content-center">
           <div className="col-11">
             <div className="qanda">
-              <h2 class="title m-b30">ECOFUD Q&amp;A</h2>
-              {qanda.map(({ question, answer }) => (
-                <div key={question}>
+              <h2
+                class="title m-b30 wow fadeInRight"
+                data-wow-duration="0.5s"
+                data-wow-delay="0.2s"
+              >
+                ECOFUD Q&amp;A
+              </h2>
+              {qanda.map(({ question, answer }, idx) => (
+                <div
+                  key={question}
+                  class="wow fadeInRight"
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.2s"
+                >
                   <div className="qanda-question">
                     <div className="qanda-question-q">Q:</div>
                     <div className="qanda-question-text">{question}</div>

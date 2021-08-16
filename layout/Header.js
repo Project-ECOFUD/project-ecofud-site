@@ -33,7 +33,6 @@ function Header2() {
                 <span></span>
                 <span></span>
               </button>
-              {/* <!-- Extra Nav --> */}
               <div className="extra-nav">
                 <div className="extra-cell">
                   <a

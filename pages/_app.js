@@ -1,10 +1,6 @@
 import React from "react";
-import "react-rangeslider/lib/index.css";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 import "../css/style.css";
-import "../styles/globals.css";
-import "../styles/switcher.css";
+import "wowjs/css/libs/animate.css";
 
 function MyApp({ Component, pageProps }) {
   return (

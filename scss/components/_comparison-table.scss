@@ -4,6 +4,11 @@
   box-shadow: 0 0px 10px 4px rgba(31, 66, 135, 0.1);
   border-radius: 20px;
   background: #fff;
+  overflow: auto;
+
+  @include respond("phone") {
+    border-radius: 0;
+  }
 }
 
 .comparison-table {
@@ -37,6 +42,10 @@
       td {
         font-size: 28px;
         color: #aaa;
+
+        @include respond("phone-land") {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -47,9 +56,17 @@
         font-size: 24px;
         text-align: center;
 
+        @include respond("phone-land") {
+          font-size: 16px;
+        }
+
         small {
           font-size: 12px;
           opacity: 0.5;
+
+          @include respond("tab-port") {
+            display: block;
+          }
         }
 
         &:first-child {
@@ -72,4 +89,8 @@
 .comparison-notes {
   color: #aaa;
   font-size: 12px;
+
+  @include respond("phone-land") {
+    font-size: 11px;
+  }
 }

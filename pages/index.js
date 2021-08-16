@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../element/Hero";
-import AboutUs2 from "../element/AboutUs";
+import AboutUs from "../element/AboutUs";
 import StatCounters from "../element/StatCounters";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
@@ -19,7 +19,7 @@ function Index(props) {
       <div className="page-content bg-white">
         <Hero />
         <div id="about">
-          <AboutUs2 />
+          <AboutUs />
         </div>
         <StatCounters />
         <div id="how-it-works">

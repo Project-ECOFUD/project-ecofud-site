@@ -15,7 +15,7 @@ export default function Comparison() {
 
   return (
     <section
-      className="content-inner-2"
+      className="content-inner-2 m-b60"
       style={{
         backgroundImage: "url(images/background/bg2.svg)",
         backgroundSize: "contain",
@@ -24,10 +24,18 @@ export default function Comparison() {
       }}
     >
       <div className="container">
-        <div className="section-head style-3 mb-4">
+        <div
+          className="section-head style-3 mb-4 wow fadeInUp"
+          data-wow-duration="0.5s"
+          data-wow-delay="0.1s"
+        >
           <h2 className="title text-center m-b40">Energy Comparisons</h2>
         </div>
-        <div class="comparison-container">
+        <div
+          class="comparison-container wow fadeInUp"
+          data-wow-duration="0.5s"
+          data-wow-delay="0.4s"
+        >
           <table class="comparison-table m-b40">
             <thead>
               <tr>
@@ -110,7 +118,11 @@ export default function Comparison() {
             </tbody>
           </table>
         </div>
-        <div class="comparison-notes">
+        <div
+          class="comparison-notes wow fadeInUp"
+          data-wow-duration="0.5s"
+          data-wow-delay="0.6s"
+        >
           Stats for Bitcoin, Bitcoin Cash, and Ethereum were taken from
           digiconomist.net and bitinfocharts.com as of August 2021.
           <br />

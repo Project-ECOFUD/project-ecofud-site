@@ -4,6 +4,10 @@
     font-size: 22px;
     margin: 0 0 15px;
 
+    @include respond("tab-port") {
+      font-size: 18px;
+    }
+
     &-q {
       margin-right: 10px;
       font-weight: bold;
@@ -16,5 +20,9 @@
     margin: 0 0 40px 10px;
     padding-left: 20px;
     border-left: 1px solid var(--primary);
+
+    @include respond("tab-port") {
+      font-size: 14px;
+    }
   }
 }

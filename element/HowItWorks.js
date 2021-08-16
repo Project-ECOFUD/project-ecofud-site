@@ -13,7 +13,7 @@ export default function HowItWorks() {
         <div className="row align-items-center">
           <div
             className="col-lg-6 m-b30 wow fadeInRight"
-            data-wow-duration="2s"
+            data-wow-duration="0.5s"
             data-wow-delay="0.4s"
           >
             <div className="section-head style-3">
@@ -39,7 +39,7 @@ export default function HowItWorks() {
           </div>
           <div
             className="col-lg-6 m-b30 wow fadeInLeft"
-            data-wow-duration="2s"
+            data-wow-duration="0.5s"
             data-wow-delay="0.2s"
           >
             <div className="dz-media right">

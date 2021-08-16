@@ -18,35 +18,23 @@ function Hero() {
               <div className="banner-content text-white">
                 <h6
                   className="wow fadeInUp sub-title bgl-light text-white"
-                  data-wow-delay="0.5s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "0.5s",
-                    animationName: "fadeInUp",
-                  }}
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.1s"
                 >
                   Sustainable Bitcoin
                 </h6>
                 <h1
                   className="wow fadeInUp m-b20"
-                  data-wow-delay="1s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "1s",
-                    animationName: "fadeInUp",
-                  }}
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.3s"
                 >
                   <small>We've sent</small> <Counter count={paymentCount} />{" "}
                   <small>Transactions to Improve Bitcoin’s Energy Usage</small>
                 </h1>
                 <h4
                   className="wow fadeInUp m-b30"
-                  data-wow-delay="1.5s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "1.5s",
-                    animationName: "fadeInUp",
-                  }}
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.5s"
                 >
                   Project ECOFUD is solving the ecological footprint of sending
                   Bitcoin, one transaction at a time.
@@ -54,12 +42,8 @@ function Hero() {
                 <a
                   href="#about"
                   className="wow fadeInUp btn btn-light text-primary shadow rounded-xl"
-                  data-wow-delay="2s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "2s",
-                    animationName: "fadeInUp",
-                  }}
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.7s"
                 >
                   Learn More
                 </a>

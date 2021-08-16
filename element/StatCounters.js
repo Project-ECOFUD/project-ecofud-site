@@ -20,7 +20,11 @@ function StatCounters() {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-sm-6 m-b30">
-              <div className="dlab-content-bx style-3 text-center">
+              <div
+                className="dlab-content-bx style-3 text-center wow fadeInUp"
+                data-wow-duration="0.5s"
+                data-wow-delay="0.1s"
+              >
                 <div className="icon-content">
                   <h2 className="m-b0 text-primary">
                     <Counter count={paymentCount} />
@@ -35,7 +39,11 @@ function StatCounters() {
               </div>
             </div>
             <div className="col-lg-4 col-sm-6 m-b30">
-              <div className="dlab-content-bx style-3 text-center">
+              <div
+                className="dlab-content-bx style-3 text-center wow fadeInUp"
+                data-wow-duration="0.5s"
+                data-wow-delay="0.3s"
+              >
                 <div className="icon-content">
                   <h2 className="m-b0 text-primary">
                     +<Counter count={improvementPct} decimals={1} />%
@@ -50,7 +58,11 @@ function StatCounters() {
               </div>
             </div>
             <div className="col-lg-4 col-sm-6 m-b30">
-              <div className="dlab-content-bx style-3 text-center">
+              <div
+                className="dlab-content-bx style-3 text-center wow fadeInUp"
+                data-wow-duration="0.5s"
+                data-wow-delay="0.5s"
+              >
                 <div className="icon-content">
                   <h2 className="m-b0 text-primary">
                     <Counter count={btc} decimals={4} />
