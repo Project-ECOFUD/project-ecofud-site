@@ -2,16 +2,6 @@
 $enable-deprecation-messages: false;
 $ignore-warning: true;
 
-:root {
-  --gradient: linear-gradient(to right, #896eff 0, #5f3bff 51%, #896eff 100%);
-  --gradient-sec: linear-gradient(
-    to right,
-    #130065 0,
-    #2b0ead 51%,
-    #130065 100%
-  );
-}
-
 // Color
 $primary: #29d169;
 //$secondary : #1f2471 !default;

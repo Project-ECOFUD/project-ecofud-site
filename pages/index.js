@@ -1,9 +1,9 @@
 import React from "react";
-import AboutUs2 from "../element/aboutUs-2";
-import Counter2 from "../element/counter2";
-import Slider2 from "../element/slider-2";
-import Footer2 from "../layout/footer-2";
-import Header2 from "./../layout/header-2";
+import Hero from "../element/Hero";
+import AboutUs2 from "../element/AboutUs";
+import StatCounters from "../element/StatCounters";
+import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 import Comparison from "../element/Comparison";
 import HowItWorks from "../element/HowItWorks";
 import QuestionAndAnswer from "../element/QuestionAndAnswer";
@@ -15,13 +15,13 @@ import { getEcofudPaymentsInfo } from "../data/api";
 function Index(props) {
   return (
     <EcofudContextProvider {...props}>
-      <Header2 />
+      <Header />
       <div className="page-content bg-white">
-        <Slider2 />
+        <Hero />
         <div id="about">
           <AboutUs2 />
         </div>
-        <Counter2 />
+        <StatCounters />
         <div id="how-it-works">
           <HowItWorks />
         </div>
@@ -36,7 +36,7 @@ function Index(props) {
         {/* Coverage? */}
         {/* <Blog2 /> */}
       </div>
-      <Footer2 />
+      <Footer />
     </EcofudContextProvider>
   );
 }
