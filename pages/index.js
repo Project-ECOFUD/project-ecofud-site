@@ -18,11 +18,19 @@ function Index(props) {
       <Header2 />
       <div className="page-content bg-white">
         <Slider2 />
+        <div id="about">
+          <AboutUs2 />
+        </div>
         <Counter2 />
-        <AboutUs2 />
-        <HowItWorks />
-        <Comparison />
-        <QuestionAndAnswer />
+        <div id="how-it-works">
+          <HowItWorks />
+        </div>
+        <div id="energy-comparison">
+          <Comparison />
+        </div>
+        <div id="qa">
+          <QuestionAndAnswer />
+        </div>
         {/* Twitter testimonials? */}
         {/* <Testimonial2 /> */}
         {/* Coverage? */}

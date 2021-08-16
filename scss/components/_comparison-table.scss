@@ -1,6 +1,6 @@
 .comparison-container {
   padding: 40px;
-  margin: 0 -20px 20px;
+  margin: 0 -20px 30px;
   box-shadow: 0 0px 10px 4px rgba(31, 66, 135, 0.1);
   border-radius: 20px;
   background: #fff;
@@ -8,10 +8,11 @@
 
 .comparison-table {
   width: 100%;
+  margin: 0;
 
   td {
     text-align: center;
-    padding: 0 15px;
+    padding: 0 15px 20px;
 
     &:first-child {
       text-align: right;
@@ -21,6 +22,14 @@
     &:last-child {
       padding-right: 0;
     }
+
+    &.green {
+      color: var(--primary);
+
+      small {
+        color: #636363;
+      }
+    }
   }
 
   thead {
@@ -28,7 +37,6 @@
       td {
         font-size: 28px;
         color: #aaa;
-        padding-bottom: 10px;
       }
     }
   }
@@ -38,7 +46,6 @@
       td {
         font-size: 24px;
         text-align: center;
-        padding-bottom: 5px;
 
         small {
           font-size: 12px;
@@ -49,6 +56,14 @@
           font-weight: 500;
           text-align: right;
         }
+
+        &:not(:first-child) {
+          font-family: var(--font-family-monospace);
+        }
+      }
+
+      &:last-child td {
+        padding-bottom: 0;
       }
     }
   }
@@ -56,4 +71,5 @@
 
 .comparison-notes {
   color: #aaa;
+  font-size: 12px;
 }

@@ -5,7 +5,7 @@ export default function QuestionAndAnswer() {
         "This is stupid, it doesn’t actually improve anything, it just artificially pads the statistics.",
       answer: (
         <>
-          We looked it up, and kWh/transaction is what’s known as a fraction.
+          We looked it up, and kWh/transaction is what’s known as a fraction.{" "}
           <a
             href="https://en.wikipedia.org/wiki/Fraction"
             target="_blank"
@@ -19,8 +19,8 @@ export default function QuestionAndAnswer() {
           checks out.
           <br />
           <br />
-          And if the amount of energy used per transaction isn’t important, then
-          why have{" "}
+          And if the amount of energy used per transaction isn’t actually an
+          important or meaningful metric, then why have{" "}
           <a
             href="https://www.nytimes.com/2021/04/14/climate/coinbase-cryptocurrency-energy.html"
             target="_blank"
@@ -52,7 +52,7 @@ export default function QuestionAndAnswer() {
           >
             Elizabeth Warren
           </a>
-          ,
+          ,{" "}
           <a
             href="https://www.forbes.com/sites/jonathanponciano/2021/03/09/bill-gates-bitcoin-crypto-climate-change/?sh=710f95176822"
             target="_blank"
@@ -61,7 +61,8 @@ export default function QuestionAndAnswer() {
             Bill Gates
           </a>
           , and countless other news outlets and thought leaders used it as a
-          talking point?
+          talking point statistic? I'm pretty sure they know what they're
+          talking about.
         </>
       ),
     },
@@ -126,35 +127,88 @@ export default function QuestionAndAnswer() {
     {
       question:
         "Is this really the absolute fastest the Lightning Network can send?",
-      answer: `
-        Oh heavens no, absolutely not. Here at Project ECOFUD, resources are extremely
-        limited. As such, we could only afford to have a single intern and hack programmer
-        throw together our proof of concept Lightning nodes together. He’s less of a computer
-        scientist, and more of a code carpenter, and has a really sub-par setup in action.
-        But our code is open source, and anyone who would like to help out is more than welcome
-        to.
-      `,
+      answer: (
+        <>
+          Oh heavens no, absolutely not. Here at Project ECOFUD, resources are
+          extremely limited. As such, we could only afford to have a single
+          intern throw together our proof of concept Lightning nodes together.
+          He's no{" "}
+          <a
+            href="https://bottlepay.com/blog/bitcoin-lightning-benchmarking-performance/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Joost Jager
+          </a>
+          . But our code is open source, and anyone who would like to help out
+          is more than welcome to.
+        </>
+      ),
     },
     {
       question:
         "Now that I’m convinced of the efficacy and legitimacy of Project ECOFUD, how can I support it?",
-      answer: `
-        We would hate to have to start paying our intern, so we aren’t seeking financial
-        support. Instead, we ask that you simply share the project, and make sure you sign
-        that dang petition. And if you're interested in what you've read here, start
-        running your own Lightning Node today. We’re counting on you!
-      `,
+      answer: (
+        <>
+          We would hate to have to start paying our intern, so we aren’t seeking
+          financial support at this time. Instead, we ask that you simply share
+          the project. And if you're interested in what you've read here, start
+          running your own Lightning Node today. We’re counting on you!
+          <br />
+          <br />
+          And please give appreciation thanks to all of the fine folks who made
+          this project possible.{" "}
+          <a
+            href="https://lightning.engineering/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lightning Labs
+          </a>{" "}
+          for the wonderful LND,{" "}
+          <a
+            href="https://voltage.cloud/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voltage
+          </a>{" "}
+          for hosting our nodes, and{" "}
+          <a href="https://steak.network/">The Steak Network</a> for inspiring
+          us to build very serious products for very serious causes.
+        </>
+      ),
     },
   ];
 
   return (
-    <div className="qanda">
-      {qanda.map(({ question, answer }) => (
-        <div key={question}>
-          <div>Q: {question}</div>
-          <div>A: {answer}</div>
+    <section
+      className="content-inner-2"
+      style={{
+        backgroundImage: "url(images/background/bg2.svg)",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-11">
+            <div className="qanda">
+              <h2 class="title m-b30">ECOFUD Q&amp;A</h2>
+              {qanda.map(({ question, answer }) => (
+                <div key={question}>
+                  <div className="qanda-question">
+                    <div className="qanda-question-q">Q:</div>
+                    <div className="qanda-question-text">{question}</div>
+                  </div>
+                  <div className="qanda-answer">{answer}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 }

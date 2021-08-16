@@ -7,7 +7,7 @@ function AllServices2() {
       {/* <!-- Service --> */}
       <section
         className="content-inner-2"
-        style={{ backgroundImage: "url(images/background/bg2.png)" }}
+        style={{ backgroundImage: "url(images/background/bg2.svg)" }}
       >
         <div className="container">
           <div className="row">

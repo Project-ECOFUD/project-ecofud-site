@@ -9,12 +9,15 @@ export default function Comparison() {
   const ecofudKwhPerTx =
     (btcKwhTxPerMinute + C.EC2_KWH_PER_MINUTE) /
     (C.BTC_ACTUAL_TX_PER_MINUTE + paymentsPerMinute);
+  const maxEcofudKwhPerTx =
+    (btcKwhTxPerMinute + C.EC2_KWH_PER_MINUTE * C.TOTAL_PUBLIC_NODES) /
+    (C.BTC_ACTUAL_TX_PER_MINUTE + paymentsPerMinute * C.TOTAL_PUBLIC_NODES);
 
   return (
     <section
       className="content-inner-2"
       style={{
-        backgroundImage: "url(images/background/bg2.png)",
+        backgroundImage: "url(images/background/bg2.svg)",
         backgroundSize: "contain",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -22,10 +25,10 @@ export default function Comparison() {
     >
       <div className="container">
         <div className="section-head style-3 mb-4">
-          <h2 className="title text-center">Energy Comparisons</h2>
+          <h2 className="title text-center m-b40">Energy Comparisons</h2>
         </div>
         <div class="comparison-container">
-          <table class="comparison-table">
+          <table class="comparison-table m-b40">
             <thead>
               <tr>
                 <td>Project</td>
@@ -73,14 +76,14 @@ export default function Comparison() {
               </tr>
               <tr>
                 <td>Bitcoin + ECOFUD</td>
-                <td>
+                <td className="green">
                   ~{ecofudKwhPerTx.toFixed(2)} <small>kWh/tx</small>
                 </td>
-                <td>
+                <td className="green">
                   ~{(C.BTC_MAX_TX_PER_MINUTE + paymentsPerMinute).toFixed(2)}{" "}
                   <small>tx/min</small>
                 </td>
-                <td>
+                <td className="green">
                   ~{(C.BTC_ACTUAL_TX_PER_MINUTE + paymentsPerMinute).toFixed(2)}{" "}
                   <small>tx/min</small>
                 </td>
@@ -89,14 +92,21 @@ export default function Comparison() {
                 <td>
                   <sup>†</sup>ECOFUD Maximum
                 </td>
-                <td>
-                  ~5.820285 × 10<sup>-10</sup> <small>kWh/tx</small>
+                <td className="green">
+                  ~{maxEcofudKwhPerTx.toFixed(5)} <small>kWh/tx</small>
+                </td>
+                <td className="green">
+                  ~
+                  {commaify(
+                    Math.floor(
+                      C.BTC_MAX_TX_PER_MINUTE +
+                        paymentsPerMinute * C.TOTAL_PUBLIC_NODES
+                    )
+                  )}{" "}
+                  <small>tx/min</small>
                 </td>
                 <td>
-                  ~4.372483 × 10<sup>11</sup> <small>tx/min</small>
-                </td>
-                <td>
-                  ~275 <small>tx/min</small>
+                  <small>N/A</small>
                 </td>
               </tr>
             </tbody>
@@ -104,14 +114,14 @@ export default function Comparison() {
         </div>
         <div class="comparison-notes">
           Stats for Bitcoin, Bitcoin Cash, and Ethereum were taken from
-          digiconomist.net as of August 2021. Stats for ECOFUD are updated in
-          real-time.
+          digiconomist.net as of August 2021.
           <br />
+          Stats for ECOFUD are updated in real-time. Energy usage for an ECOFUD
+          node is measured using EC2 energy usage estimations.
           <br />
-          <sup>†</sup>The theoretical "ECOFUD Maximum" is a projection of if
-          every bitcoin transaction for the next year was a channel opening
-          between two ECOFUD nodes, which then continued to send back and forth
-          in perpetuity. Truly the vision of a perfect utopia.
+          The theoretical "ECOFUD Maximum" is if every public node were sending
+          transactions at the rate that the ECOFUD nodes are sending. Truly the
+          vision of a perfect utopia.
         </div>
       </div>
     </section>

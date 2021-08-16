@@ -36,10 +36,10 @@ function Slider2() {
                     animationName: "fadeInUp",
                   }}
                 >
-                  <Counterup count={paymentCount} />{" "}
-                  <small>Transactions to improve Bitcoin’s energy usage</small>
+                  <small>We've sent</small> <Counterup count={paymentCount} />{" "}
+                  <small>Transactions to Improve Bitcoin’s Energy Usage</small>
                 </h1>
-                <p
+                <h4
                   className="wow fadeInUp m-b30"
                   data-wow-delay="1.5s"
                   style={{
@@ -48,13 +48,11 @@ function Slider2() {
                     animationName: "fadeInUp",
                   }}
                 >
-                  Mauris in enim sollicitudin quam sollicitudin fermentum ut
-                  vitae massa. Donec venenatis accumsan nisi, sit amet maximus
-                  velit euismod sit amet. Vivamus et sem sed ipsum pretium
-                  lobortis non vitae sem.
-                </p>
+                  Project ECOFUD is solving the ecological footprint of sending
+                  Bitcoin, one transaction at a time.
+                </h4>
                 <a
-                  href="/about-us-2"
+                  href="#about"
                   className="wow fadeInUp btn btn-light text-primary shadow rounded-xl"
                   data-wow-delay="2s"
                   style={{

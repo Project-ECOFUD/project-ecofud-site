@@ -3,8 +3,8 @@ export const BCH_KWH_PER_TX = 21.45;
 export const ETH_KWH_PER_TX = 140.76;
 export const KWH_PER_TX_LAST_UPDATED = "August 14th, 2021";
 
-export const BTC_MAX_TX_PER_MINUTE = 420;
-export const BCH_MAX_TX_PER_MINUTE = 6960;
+export const BTC_MAX_TX_PER_MINUTE = 270;
+export const BCH_MAX_TX_PER_MINUTE = 3700;
 export const ETH_MAX_TX_PER_MINUTE = 1500;
 export const MAX_TX_PER_MINUTE_LAST_UPDATED = "August 14th, 2021";
 
@@ -18,3 +18,4 @@ export const ECOFUD_STARTED_AT = parseInt(
   10
 );
 export const EC2_KWH_PER_MINUTE = 0.0000059375;
+export const TOTAL_PUBLIC_NODES = 24822;

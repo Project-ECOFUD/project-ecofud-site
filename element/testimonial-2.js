@@ -7,7 +7,7 @@ function Testimonial2() {
       <section
         className="content-inner-2"
         style={{
-          backgroundImage: "url(images/background/bg17.png)",
+          backgroundImage: "url(images/background/bg17.svg)",
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

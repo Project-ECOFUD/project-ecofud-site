@@ -1,0 +1,20 @@
+.qanda {
+  &-question {
+    display: flex;
+    font-size: 22px;
+    margin: 0 0 15px;
+
+    &-q {
+      margin-right: 10px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+  }
+
+  &-answer {
+    font-size: 16px;
+    margin: 0 0 40px 10px;
+    padding-left: 20px;
+    border-left: 1px solid var(--primary);
+  }
+}

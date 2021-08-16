@@ -36,11 +36,14 @@ function Header2() {
               {/* <!-- Extra Nav --> */}
               <div className="extra-nav">
                 <div className="extra-cell">
-                  <Link href="contact-us-2">
-                    <a className="btn btn-primary rounded-xl gradient shadow">
-                      Run a Node
-                    </a>
-                  </Link>
+                  <a
+                    className="btn btn-primary rounded-xl gradient shadow"
+                    href="https://bitcoiner.guide/lightning/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Run a Node
+                  </a>
                 </div>
               </div>
               <div
@@ -52,25 +55,30 @@ function Header2() {
                 <div className="logo-header">
                   <Link href="/">
                     <a>
-                      <img src="images/logo-2.png" alt="" />
+                      <img src="images/logo-green.svg" alt="" />
                     </a>
                   </Link>
                 </div>
 
                 <ul className="nav navbar-nav navbar">
                   <li>
-                    <Link href="/">
+                    <Link href="#about">
                       <a>About</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">
-                      <a>Energy comparison</a>
+                    <Link href="#how-it-works">
+                      <a>How it works</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">
-                      <a>FAQ</a>
+                    <Link href="#energy-comparison">
+                      <a>Energy comparisons</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#qa">
+                      <a>Q&amp;A</a>
                     </Link>
                   </li>
                 </ul>

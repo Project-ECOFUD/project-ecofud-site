@@ -8,7 +8,7 @@ function OurServices2() {
       <section
         className="content-inner-2"
         style={{
-          backgroundImage: "url(images/background/bg2.png)",
+          backgroundImage: "url(images/background/bg2.svg)",
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
