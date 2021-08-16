@@ -24,7 +24,7 @@ function Counter({ count, ...props }) {
           delayedCall
           active={!hasStarted}
         >
-          <span ref={countUpRef}>count</span>
+          <span ref={countUpRef}>{count}</span>
         </VisibilitySensor>
       )}
     </CountUp>
