@@ -89,9 +89,7 @@ export default function Comparison() {
                 </td>
               </tr>
               <tr>
-                <td>
-                  <sup>†</sup>ECOFUD Maximum
-                </td>
+                <td>ECOFUD Maximum</td>
                 <td className="green">
                   ~{maxEcofudKwhPerTx.toFixed(5)} <small>kWh/tx</small>
                 </td>
@@ -114,7 +112,7 @@ export default function Comparison() {
         </div>
         <div class="comparison-notes">
           Stats for Bitcoin, Bitcoin Cash, and Ethereum were taken from
-          digiconomist.net as of August 2021.
+          digiconomist.net and bitinfocharts.com as of August 2021.
           <br />
           Stats for ECOFUD are updated in real-time. Energy usage for an ECOFUD
           node is measured using EC2 energy usage estimations.
