@@ -17,7 +17,7 @@ function AboutUs_2() {
             data-wow-delay="0.2s"
           >
             <div className="dz-media left">
-              <img src="images/about/robot-hand.jpg" alt="" />
+              <img src="images/about/robot-hand-min.jpg" alt="" />
             </div>
           </div>
           <div

@@ -44,7 +44,7 @@ export default function HowItWorks() {
           >
             <div className="dz-media right">
               <img
-                src="images/about/circuits.jpg"
+                src="images/about/circuits-min.jpg"
                 style={{ opacity: 0.5 }}
                 alt=""
               />

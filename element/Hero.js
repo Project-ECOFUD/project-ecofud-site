@@ -55,7 +55,7 @@ function Hero() {
         </div>
       </div>
       <div className="dz-media">
-        <img src="images/main-slider/slider2/pic-alt.jpg" alt />
+        <img src="images/main-slider/slider2/pic-alt-min.jpg" alt />
       </div>
     </div>
   );
