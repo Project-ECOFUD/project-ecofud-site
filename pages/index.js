@@ -43,18 +43,20 @@ function Index(props) {
 
 export async function getStaticProps() {
   let info;
+  let revalidate = 60;
   try {
     info = await getEcofudPaymentsInfo();
   } catch (err) {
     console.error("Failed to get payment info in getStaticProps", err);
     info = { count: 0, amount: 0 };
+    revalidate = 1;
   }
   return {
     props: {
       initialCount: info.count,
       initialAmount: info.amount,
     },
-    revalidate: 60,
+    revalidate,
   };
 }
 
